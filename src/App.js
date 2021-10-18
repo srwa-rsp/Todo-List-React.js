@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import InputTodo from "./input";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class TodoList extends React.Component{
+  constructor(props){
+    super(props)
+  }
+  render(){
+    return(
+      <div id='todo-list' className='container w-2/5 mx-auto bg-gray-200 flex flex-col items-center'>
+        <h1 className='text-center mb-8'>Serwa's Todo List</h1>
+        <InputTodo />
+      </div>
+    )
+  }
 }
 
-export default App;
+export default TodoList;
