@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components{
+    .completed{
+        @apply line-through opacity-50;
+    }
+}
